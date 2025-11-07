@@ -19,9 +19,14 @@
         <h1 class="text-3xl font-extrabold text-gray-900 mb-8">Dashboard Feed</h1>
         <!-- Feed Card Component -->
         <div class="space-y-8">
-            @for ($i = 0; $i < 3; $i++)
+            @forelse ($posts as $post)
+            <x-feed-card :post="$post" />
+            @empty
+                <p>No posts available.</p>
+            @endforelse
+            {{-- @for ($i = 0; $i < 3; $i++)
             <x-feed-card :post="$posts[$i]" />
-            @endfor
+            @endfor --}}
         </div>
     </div>
     <x-modals.create />

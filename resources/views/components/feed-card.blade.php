@@ -19,7 +19,7 @@
     <!-- Post Image -->
     <div class="w-full aspect-square bg-gray-200">
         <img class="w-full h-full object-cover"
-            src="https://placehold.co/600x600/6366f1/ffffff?text={{ $post->image_test }}"
+            src="{{ public_path($post->image_source) ?? "https://placehold.co/600x600/6366f1/ffffff?text=".$post->image_test ?? 'empty' }}"
             alt="Feature Spotlight Image"
         >
     </div>
