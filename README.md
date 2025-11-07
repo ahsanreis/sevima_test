@@ -23,7 +23,7 @@ Follow these steps to set up your development environment:
 
 1.  **Clone the Repository:**
     ```bash
-    git clone [https://github.com/ahsanreis/sevima_test.git](https://github.com/ahsanreis/sevima_test.git)
+    git clone https://github.com/ahsanreis/sevima_test.git
     cd sevima_test
     ```
 
