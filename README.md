@@ -30,6 +30,7 @@ Follow these steps to set up your development environment:
 2.  **Install PHP Dependencies:**
     ```bash
     composer install
+    npm install
     ```
 
 3.  **Set Up Environment File:**
