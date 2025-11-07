@@ -220,7 +220,7 @@
             return response.json();
         })
         .then(data => {
-            console.log('Post uploaded successfully:', data);
+            document.getElementById('post-caption').value = '';
             closeModal();
         })
         .catch(error => {

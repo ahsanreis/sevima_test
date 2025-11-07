@@ -18,6 +18,7 @@ class PostController extends Controller
         // Handle the image upload
         if ($request->hasFile('image')) {
             $imagePath = $request->file('image')->store('posts', 'public');
+            $imagePath = public_path('storage/' . $imagePath);
         } else {
             return response()->json(['error' => 'Image upload failed'], 400);
         }
@@ -25,7 +26,7 @@ class PostController extends Controller
         // Create the post
         $post = $request->user()->posts()->create([
             'caption' => $validatedData['caption'] ?? null,
-            'image_path' => $imagePath,
+            'post_image' => $imagePath,
         ]);
 
         return response()->json(['message' => 'Post created successfully', 'post' => $post], 201);
